@@ -1,12 +1,10 @@
 :host {
+  flex: 1 1 100%;
   padding: 0 16px;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  border: 1px dashed grey;
-  box-sizing: border-box;
-  height: 100%; /* Has no effect */
 }
 
 h2 {
@@ -17,9 +15,20 @@ h2 {
   margin-top: 0.83em;
 }
 
-.login-container {
+.login-form {
   display: flex;
   flex-flow: column;
-  box-sizing: border-box;
-  width: 400px;
+  width: 300px;
+}
+
+.login-form > input:first-of-type {
+  border-bottom-width: 0;
+}
+
+.login-button {
+  align-self: flex-end;
+}
+
+.invisible {
+  visibility: hidden;
 }
