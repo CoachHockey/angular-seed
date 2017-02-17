@@ -1,0 +1,25 @@
+:host {
+  padding: 0 16px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed grey;
+  box-sizing: border-box;
+  height: 100%; /* Has no effect */
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  margin-bottom: 0.5em;
+  margin-top: 0.83em;
+}
+
+.login-container {
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  width: 400px;
+}
