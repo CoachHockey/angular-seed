@@ -3,6 +3,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { Cache } from '../cache.model';
 import { SessionStorage } from './session.storage';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/delay';
 import Spy = jasmine.Spy;
 
 export function main() {

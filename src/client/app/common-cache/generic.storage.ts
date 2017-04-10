@@ -1,6 +1,9 @@
 import { Cache } from './cache.model';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/share';
 
 export class GenericStorage implements Cache {
 
