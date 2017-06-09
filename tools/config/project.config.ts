@@ -58,6 +58,9 @@ export class ProjectConfig extends SeedConfig {
 
     /* Add to or override NPM module configurations: */
     // this.PLUGIN_CONFIGS['browser-sync'] = { ghostMode: false };
+
+    // Fix local offset
+    this.APP_BASE = '/angular-seed/dist/prod/';
   }
 
 }

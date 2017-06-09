@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NameListService } from '../shared/name-list/name-list.service';
+import { UserService } from '../aot/user-service/user.service';
+import { TaskService } from '../aot/task-service/task.service';
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -22,7 +24,14 @@ export class HomeComponent implements OnInit {
    *
    * @param {NameListService} nameListService - The injected NameListService.
    */
-  constructor(public nameListService: NameListService) {}
+  constructor(
+    public nameListService: NameListService,
+    public userService : UserService,
+    public taskService : TaskService
+  ) {
+    userService.test();
+    taskService.test();
+  }
 
   /**
    * Get the names OnInit
