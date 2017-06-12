@@ -1,8 +1,6 @@
 // indexeddb-store.ts
-import { Injectable } from '@angular/core';
 import { IndexedDBCache } from './indexeddb-cache';
 
-@Injectable()
 export class IndexedDBStore {
 
   constructor(
