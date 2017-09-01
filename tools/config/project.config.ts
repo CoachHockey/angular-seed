@@ -1,7 +1,7 @@
 import { join } from 'path';
 
 import { SeedConfig } from './seed.config';
-// import { ExtendPackages } from './seed.config.interfaces';
+import { ExtendPackages } from './seed.config.interfaces';
 
 /**
  * This class extends the basic seed configuration, allowing for project specific overrides. A few examples can be found
@@ -53,13 +53,21 @@ export class ProjectConfig extends SeedConfig {
     //
     // this.addPackagesBundles(additionalPackages);
 
-    this.addPackageBundles({
-      name:'@angular/material',
-      path:'node_modules/@angular/material/bundles/material.umd.js',
-      packageMeta:{
-        defaultExtension: 'js'
+    let additionalPackages: ExtendPackages[] = [
+      {
+        name:'@angular/material',
+        path:'node_modules/@angular/material/bundles/material.umd.js',
+        packageMeta:{
+          defaultExtension: 'js'
+        }
+      },
+      {
+        name: '@angular/cdk',
+        path: 'node_modules/@angular/cdk/bundles/cdk.umd.js'
       }
-    });
+    ];
+
+    this.addPackagesBundles(additionalPackages);
 
     /* Add proxy middleware */
     // this.PROXY_MIDDLEWARE = [
